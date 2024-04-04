@@ -15,14 +15,13 @@ public class CreateCarServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
         String carName = request.getParameter("carName");
-        Car car = new Car();
-        car.setName(carName);
+        Car car = new Car(carName);
         //System.out.println("O nome do carro é " + car.getName());
 
         CarDAO carDao = new CarDAO();
 
         carDao.createCar(car);
 
-        request.getRequestDispatcher("index.html").forward(request, resp);
+        resp.sendRedirect("/find-all-cars");
     }
 }

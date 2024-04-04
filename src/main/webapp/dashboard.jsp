@@ -8,7 +8,7 @@
 <body>
   <div>
     <h1>Cars</h1>
-    <table>
+    <table border=1>
         <tr>
             <th>ID</th>
             <th>Name</th>

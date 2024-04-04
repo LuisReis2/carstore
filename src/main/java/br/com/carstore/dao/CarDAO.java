@@ -50,11 +50,10 @@ public class CarDAO {
 
             }
             System.out.println("Consultar lista com sucesso!");
-
+            return cars;
         }catch (Exception a){
             System.out.println("Falha ao acessar carros");
             return Collections.emptyList();
         }
-    return null;
     }
 }
